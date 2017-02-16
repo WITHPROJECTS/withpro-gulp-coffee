@@ -14,7 +14,7 @@ let runSequence    = require('run-sequence');
 let isWatching     = false;
 let conf           = {
     'path'    : {},
-    'concat'  : {},
+    'concat'  : false,
     'options' : {},
     'uglify'  : true
 }
@@ -33,13 +33,6 @@ conf.path = {
         'js' : 'build/js'
     }
 };
-
-conf.concat = {
-    'common.coffee' : [
-        'partial/_a.coffee',
-        'partial/_b.coffee'
-    ]
-}
 
 // /////////////////////////////////////////////////////////////////////////////
 //
